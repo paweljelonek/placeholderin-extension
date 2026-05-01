@@ -1,5 +1,8 @@
 # Placeholderin
 
+![Status: Unstable](https://img.shields.io/badge/status-unstable-red)
+![Work in progress](https://img.shields.io/badge/work%20in%20progress-%F0%9F%9A%A7-orange)
+
 A Chrome extension that fills web forms with realistic fake data - built for manual testers who are tired of typing the same dummy values over and over again.
 
 ## What is this?
@@ -10,7 +13,8 @@ It is aimed primarily at **manual testers** who need to quickly fill out forms d
 
 ## Status
 
-> **This is an early development version.** Things are incomplete, APIs may change, and some features are still missing. There is no set release date - this project is developed in free time, for fun, with no deadlines and no pressure.
+> [!WARNING]
+> **Unstable - work in progress.** This project is in early development. Things are incomplete, APIs may change, and some features are still missing. There is no set release date - this project is developed in free time, for fun, with no deadlines and no pressure.
 
 ## Design goals
 

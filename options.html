@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Placeholderin - Settings</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        width: 320px;
+        font-family: system-ui, sans-serif;
+        font-size: 13px;
+        color: #1f2937;
+        background: #fff;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 14px;
+        background: #ef4444;
+        color: #fff;
+      }
+
+      header img { width: 24px; height: 24px; }
+      header h1  { font-size: 15px; font-weight: 600; }
+
+      main { padding: 16px 14px; display: flex; flex-direction: column; gap: 14px; }
+
+      .field { display: flex; flex-direction: column; gap: 4px; }
+
+      label { font-weight: 500; color: #374151; }
+
+      select {
+        padding: 6px 8px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        font-size: 13px;
+        background: #fff;
+      }
+
+      .checkbox-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      input[type="checkbox"] { width: 15px; height: 15px; cursor: pointer; }
+
+      button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        background: #ef4444;
+        color: #fff;
+        transition: background 0.15s;
+      }
+
+      button:hover { background: #dc2626; }
+
+      #status {
+        font-size: 11px;
+        color: #6b7280;
+        min-height: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="icons/icon32.png" alt="" />
+      <h1>Settings</h1>
+    </header>
+    <main>
+      <div class="field">
+        <label for="locale">Language / Locale</label>
+        <select id="locale">
+          <option value="en">English</option>
+          <option value="pl">Polish</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <div class="checkbox-row">
+          <input type="checkbox" id="fillOnlyEmpty" />
+          <label for="fillOnlyEmpty">Fill only empty fields</label>
+        </div>
+      </div>
+
+      <button id="saveBtn">Save</button>
+      <div id="status"></div>
+    </main>
+    <script src="dist/options.js"></script>
+  </body>
+</html>
