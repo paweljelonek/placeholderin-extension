@@ -48,18 +48,16 @@
         transition: background 0.15s;
       }
 
-      button:hover { background: #dc2626; }
-
-      #optionsBtn {
+      button:hover  { background: #dc2626; }
+      button:last-child {
         background: none;
         color: #6b7280;
         font-size: 11px;
         padding: 4px;
         text-decoration: underline;
-        cursor: pointer;
       }
 
-      #optionsBtn:hover { color: #374151; background: none; }
+      button:last-child:hover { color: #374151; background: none; }
 
       #status {
         font-size: 11px;
@@ -76,10 +74,9 @@
       <span>v0.1.0-dev</span>
     </header>
     <main>
-      <button id="fillBtn">Fill form with fake data</button>
+      <div id="actions"></div>
       <div id="status"></div>
-      <button id="optionsBtn">Settings</button>
     </main>
-    <script src="dist/popup.js"></script>
+    <script src="dist/popup/index.js"></script>
   </body>
 </html>
