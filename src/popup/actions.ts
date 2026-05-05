@@ -3,7 +3,8 @@ import { fillForm }      from './handlers/fillForm';
 import { fillFirstName } from './handlers/fillFirstName';
 import { fillLastName }  from './handlers/fillLastName';
 import { fillCity }      from './handlers/fillCity';
-import { fillStreet }    from './handlers/fillStreet';
+import { fillStreet }      from './handlers/fillStreet';
+import { fillPostalCode }  from './handlers/fillPostalCode';
 import { openSettings }  from './handlers/openSettings';
 
 export const actions: Action[] = [
@@ -12,5 +13,6 @@ export const actions: Action[] = [
   { label: 'Fill last name',           handler: fillLastName },
   { label: 'Fill city',                handler: fillCity },
   { label: 'Fill street',              handler: fillStreet },
+  { label: 'Fill postal code',         handler: fillPostalCode },
   { label: 'Settings',                 handler: openSettings },
 ];

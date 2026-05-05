@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "build": "tsc --noEmit && esbuild src/background.ts src/content.ts src/popup/index.ts src/options.ts --bundle --outdir=dist --target=chrome120 --format=iife",
-    "dev": "tsc --noEmit --watch & esbuild src/background.ts src/content.ts src/popup/index.ts src/options.ts --bundle --outdir=dist --target=chrome120 --format=iife --watch"
+    "dev": "tsc --noEmit --watch & esbuild src/background.ts src/content.ts src/popup/index.ts src/options.ts --bundle --outdir=dist --target=chrome120 --format=iife --watch",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.270",
     "esbuild": "^0.28.0",
-    "typescript": "^5.8.3"
+    "happy-dom": "^20.9.0",
+    "typescript": "^5.8.3",
+    "vitest": "^2.1.9"
   }
 }
