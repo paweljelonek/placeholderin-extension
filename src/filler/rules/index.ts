@@ -1,6 +1,8 @@
 import { Locale } from '../../settings';
 import { firstName } from './firstName';
 import { lastName } from './lastName';
+import { city } from './city';
+import { street } from './street';
 
 export const attr = (f: HTMLInputElement) =>
   `${f.getAttribute('autocomplete') ?? ''} ${f.name} ${f.id} ${f.placeholder}`.toLowerCase();
@@ -14,4 +16,6 @@ export interface Rule {
 export const rules: Rule[] = [
   firstName,
   lastName,
+  city,
+  street,
 ];
