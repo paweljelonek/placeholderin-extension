@@ -4,6 +4,7 @@ import { lastName } from '../../../src/filler/rules/lastName';
 import { city } from '../../../src/filler/rules/city';
 import { street } from '../../../src/filler/rules/street';
 import { postalCode } from '../../../src/filler/rules/postalCode';
+import { pesel } from '../../../src/filler/rules/pesel';
 
 function field(attrs: Partial<Pick<HTMLInputElement, 'name' | 'id' | 'placeholder'>> & { autocomplete?: string }): HTMLInputElement {
   const el = document.createElement('input');
@@ -51,4 +52,11 @@ describe('postalCode rule', () => {
   it('matches name zip',                         () => expect(postalCode.test(field({ name: 'zip' }))).toBe(true));
   it('matches name postcode',                    () => expect(postalCode.test(field({ name: 'postcode' }))).toBe(true));
   it('matches Polish kod pocztowy',              () => expect(postalCode.test(field({ placeholder: 'Kod pocztowy' }))).toBe(true));
+});
+
+describe('pesel rule', () => {
+  it('matches name pesel',                       () => expect(pesel.test(field({ name: 'pesel' }))).toBe(true));
+  it('matches id PESEL (uppercase)',             () => expect(pesel.test(field({ id: 'PESEL' }))).toBe(true));
+  it('matches placeholder Numer PESEL',          () => expect(pesel.test(field({ placeholder: 'Numer PESEL' }))).toBe(true));
+  it('does not match unrelated field',           () => expect(pesel.test(field({ name: 'email' }))).toBe(false));
 });

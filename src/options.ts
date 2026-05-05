@@ -15,6 +15,7 @@ saveBtn.addEventListener('click', async () => {
     locale:        localeEl.value as Locale,
     fillOnlyEmpty: fillOnlyEmptyEl.checked,
   });
-  statusEl.textContent = 'Saved!';
-  setTimeout(() => { statusEl.textContent = ''; }, 2000);
+  statusEl.textContent = '✓ Zapisano';
+  statusEl.className = 'ok';
+  setTimeout(() => { statusEl.textContent = ''; statusEl.className = ''; }, 2000);
 });

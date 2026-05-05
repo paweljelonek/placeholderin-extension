@@ -3,7 +3,7 @@
   "name": "Placeholderin",
   "description": "Fill forms with fake data for testing purposes",
   "version": "0.1.0",
-  "author": "Paweł Jelonek <pawel.jelonek@gmail.coms>",
+  "author": "Paweł Jelonek <pawel.jelonek@gmail.com>",
   "permissions": [
     "activeTab",
     "scripting",
@@ -30,8 +30,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["dist/content.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "dist/content.js"
+      ],
       "run_at": "document_idle",
       "all_frames": true
     }
