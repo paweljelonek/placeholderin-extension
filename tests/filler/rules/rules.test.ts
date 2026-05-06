@@ -5,6 +5,8 @@ import { city } from '../../../src/filler/rules/city';
 import { street } from '../../../src/filler/rules/street';
 import { postalCode } from '../../../src/filler/rules/postalCode';
 import { pesel } from '../../../src/filler/rules/pesel';
+import { nip } from '../../../src/filler/rules/nip';
+import { phone } from '../../../src/filler/rules/phone';
 
 function field(attrs: Partial<Pick<HTMLInputElement, 'name' | 'id' | 'placeholder'>> & { autocomplete?: string }): HTMLInputElement {
   const el = document.createElement('input');
@@ -59,4 +61,41 @@ describe('pesel rule', () => {
   it('matches id PESEL (uppercase)',             () => expect(pesel.test(field({ id: 'PESEL' }))).toBe(true));
   it('matches placeholder Numer PESEL',          () => expect(pesel.test(field({ placeholder: 'Numer PESEL' }))).toBe(true));
   it('does not match unrelated field',           () => expect(pesel.test(field({ name: 'email' }))).toBe(false));
+});
+
+describe('nip rule', () => {
+  it('matches name nip',                         () => expect(nip.test(field({ name: 'nip' }))).toBe(true));
+  it('matches id NIP (uppercase)',               () => expect(nip.test(field({ id: 'NIP' }))).toBe(true));
+  it('matches placeholder NIP firmy',            () => expect(nip.test(field({ placeholder: 'NIP firmy' }))).toBe(true));
+  it('matches name nip_firmy',                   () => expect(nip.test(field({ name: 'nip_firmy' }))).toBe(true));
+  it('matches name firma_nip',                   () => expect(nip.test(field({ name: 'firma_nip' }))).toBe(true));
+  it('matches name numer_nip',                   () => expect(nip.test(field({ name: 'numer_nip' }))).toBe(true));
+  it('matches name company_nip',                 () => expect(nip.test(field({ name: 'company_nip' }))).toBe(true));
+  it('matches name nip-firmy (dash)',            () => expect(nip.test(field({ name: 'nip-firmy' }))).toBe(true));
+  it('matches name tax_id',                      () => expect(nip.test(field({ name: 'tax_id' }))).toBe(true));
+  it('matches name tax-id',                      () => expect(nip.test(field({ name: 'tax-id' }))).toBe(true));
+  it('does not match unrelated field',           () => expect(nip.test(field({ name: 'email' }))).toBe(false));
+  it('does not match partial word nipple',       () => expect(nip.test(field({ name: 'nipple' }))).toBe(false));
+});
+
+describe('phone rule', () => {
+  it('matches autocomplete tel',                 () => expect(phone.test(field({ autocomplete: 'tel' }))).toBe(true));
+  it('matches autocomplete tel-national',        () => expect(phone.test(field({ autocomplete: 'tel-national' }))).toBe(true));
+  it('matches autocomplete tel-local',           () => expect(phone.test(field({ autocomplete: 'tel-local' }))).toBe(true));
+  it('matches name tel',                         () => expect(phone.test(field({ name: 'tel' }))).toBe(true));
+  it('matches name telefon',                     () => expect(phone.test(field({ name: 'telefon' }))).toBe(true));
+  it('matches name telephone',                   () => expect(phone.test(field({ name: 'telephone' }))).toBe(true));
+  it('matches name phone',                       () => expect(phone.test(field({ name: 'phone' }))).toBe(true));
+  it('matches name mobile',                      () => expect(phone.test(field({ name: 'mobile' }))).toBe(true));
+  it('matches name gsm',                         () => expect(phone.test(field({ name: 'gsm' }))).toBe(true));
+  it('matches name numer_tel',                   () => expect(phone.test(field({ name: 'numer_tel' }))).toBe(true));
+  it('matches name tel_komorkowy',               () => expect(phone.test(field({ name: 'tel_komorkowy' }))).toBe(true));
+  it('matches name phone_number',                () => expect(phone.test(field({ name: 'phone_number' }))).toBe(true));
+  it('matches name user_phone',                  () => expect(phone.test(field({ name: 'user_phone' }))).toBe(true));
+  it('matches name contact_mobile',              () => expect(phone.test(field({ name: 'contact_mobile' }))).toBe(true));
+  it('matches name mobile_number',               () => expect(phone.test(field({ name: 'mobile_number' }))).toBe(true));
+  it('matches name gsm_number',                  () => expect(phone.test(field({ name: 'gsm_number' }))).toBe(true));
+  it('matches placeholder Numer telefonu',       () => expect(phone.test(field({ placeholder: 'Numer telefonu' }))).toBe(true));
+  it('does not match name hotel',                () => expect(phone.test(field({ name: 'hotel' }))).toBe(false));
+  it('does not match unrelated field',           () => expect(phone.test(field({ name: 'email' }))).toBe(false));
 });

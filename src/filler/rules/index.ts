@@ -5,6 +5,8 @@ import { city } from './city';
 import { street } from './street';
 import { postalCode } from './postalCode';
 import { pesel } from './pesel';
+import { nip } from './nip';
+import { phone } from './phone';
 
 export const attr = (f: HTMLInputElement) =>
   `${f.getAttribute('autocomplete') ?? ''} ${f.name} ${f.id} ${f.placeholder}`.toLowerCase();
@@ -24,4 +26,6 @@ export const rules: Rule[] = [
   street,
   postalCode,
   pesel,
+  nip,
+  phone,
 ];
