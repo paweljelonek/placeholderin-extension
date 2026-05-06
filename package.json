@@ -2,6 +2,7 @@
   "name": "placeholderin",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "tsc --noEmit && esbuild src/background.ts src/content.ts src/popup/index.ts src/options.ts --bundle --outdir=dist --target=chrome120 --format=iife",
     "dev": "tsc --noEmit --watch & esbuild src/background.ts src/content.ts src/popup/index.ts src/options.ts --bundle --outdir=dist --target=chrome120 --format=iife --watch",
