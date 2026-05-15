@@ -62,7 +62,7 @@ Open the settings page from the extension popup (⚙ Ustawienia).
 # install dependencies
 npm install
 
-# build once
+# build once (outputs to dist/)
 npm run build
 
 # watch mode
@@ -72,9 +72,25 @@ npm run dev
 npm test
 ```
 
-Built with TypeScript + esbuild. No framework dependencies - plain DOM, plain Chrome extension APIs.
+### Packaging for distribution
 
-To load the extension locally: open `chrome://extensions`, enable *Developer mode*, click *Load unpacked*, and select this directory.
+```bash
+# assemble Chrome extension → dist/chrome/
+npm run package:chrome
+
+# assemble Firefox extension → dist/firefox/
+npm run package:firefox
+```
+
+Both commands run a full build first, then copy all extension assets and the right manifest into the target directory. Load that directory in the browser to test the packaged version.
+
+### Loading locally
+
+**Chrome:** open `chrome://extensions`, enable *Developer mode*, click *Load unpacked*, select the **root** of this repository.
+
+**Firefox:** open `about:debugging`, click *This Firefox*, then *Load Temporary Add-on* and select `manifest.firefox.json` from the root. Alternatively, after running `npm run package:firefox`, load the `dist/firefox/` directory.
+
+Built with TypeScript + esbuild. No framework dependencies - plain DOM, plain browser extension APIs.
 
 ## Design goals
 
