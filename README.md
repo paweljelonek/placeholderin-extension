@@ -3,11 +3,11 @@
 ![Status: Unstable](https://img.shields.io/badge/status-unstable-red)
 ![Work in progress](https://img.shields.io/badge/work%20in%20progress-%F0%9F%9A%A7-orange)
 
-A Chrome extension that fills web forms with realistic fake data - built for manual testers who are tired of typing the same dummy values over and over again.
+A browser extension for Chrome and Firefox that fills web forms with realistic fake data - built for manual testers who are tired of typing the same dummy values over and over again.
 
 ## What is this?
 
-Placeholderin is a lightweight browser extension that detects input fields on any web page and populates them with contextually appropriate fake data: names, addresses, phone numbers, tax identifiers, and more.
+Placeholderin is a lightweight extension for Chrome and Firefox that detects input fields on any web page and populates them with contextually appropriate fake data: names, addresses, phone numbers, tax identifiers, and more.
 
 It is aimed primarily at **manual testers** who need to quickly fill out forms during exploratory testing, regression testing, or demo walkthroughs - without copy-pasting from a notes file or making things up on the spot.
 
@@ -88,7 +88,7 @@ Both commands run a full build first, then copy all extension assets and the rig
 
 **Chrome:** open `chrome://extensions`, enable *Developer mode*, click *Load unpacked*, select the **root** of this repository.
 
-**Firefox:** open `about:debugging`, click *This Firefox*, then *Load Temporary Add-on* and select `manifest.firefox.json` from the root. Alternatively, after running `npm run package:firefox`, load the `dist/firefox/` directory.
+**Firefox:** run `npm run package:firefox` first, then open `about:debugging`, click *This Firefox* → *Load Temporary Add-on*, and select any file inside `dist/firefox/`.
 
 Built with TypeScript + esbuild. No framework dependencies - plain DOM, plain browser extension APIs.
 
