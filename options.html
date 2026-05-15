@@ -142,6 +142,55 @@
       .toggle input:checked + .toggle-track { background: #4f46e5; }
       .toggle input:checked + .toggle-track::after { transform: translateX(16px); }
 
+      /* -- shortcut control -- */
+      .shortcut-control {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+
+      .shortcut-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        background: #f3f4f6;
+        border: 1.5px solid #e5e7eb;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #374151;
+        letter-spacing: 0.03em;
+        min-width: 64px;
+        text-align: center;
+      }
+
+      .btn-record {
+        padding: 5px 14px;
+        background: #f9fafb;
+        border: 1.5px solid #e5e7eb;
+        border-radius: 7px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #374151;
+        cursor: pointer;
+        transition: border-color 0.15s, background 0.15s;
+        white-space: nowrap;
+      }
+
+      .btn-record:hover    { border-color: #a5b4fc; background: #eef2ff; }
+      .btn-record.recording {
+        border-color: #6366f1;
+        background: #eef2ff;
+        color: #4f46e5;
+      }
+
+      /* -- section divider -- */
+      .section-divider {
+        height: 1px;
+        background: #f3f4f6;
+        margin: 0 16px;
+      }
+
       /* -- about section -- */
       .about { margin-top: 0; }
 
@@ -239,6 +288,35 @@
             <span class="toggle-track"></span>
           </label>
         </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Szybkie wypełnianie</div>
+      <div class="card">
+
+        <div class="setting-row">
+          <div class="setting-label">
+            <strong>Skrót klawiszowy</strong>
+            <span>Najedź na pole i naciśnij skrót, aby wybrać dane</span>
+          </div>
+          <div class="shortcut-control">
+            <span class="shortcut-badge" id="shortcutDisplay"></span>
+            <button class="btn-record" id="shortcutRecord">Zmień</button>
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="setting-row">
+          <div class="setting-label">
+            <strong>Widoczne opcje w menu</strong>
+            <span>Które kategorie danych pokazać w menu skrótu</span>
+          </div>
+        </div>
+
+        <div id="quickFillList"></div>
+
       </div>
     </div>
 

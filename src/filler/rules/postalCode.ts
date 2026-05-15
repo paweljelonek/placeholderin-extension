@@ -3,6 +3,8 @@ import { postalCodeGenerator } from '../providers/postalCode';
 
 export const postalCode: Rule = {
   type: 'postalCode',
+  label: 'Kod pocztowy',
+  icon: '📮',
   test: f =>
     f.getAttribute('autocomplete') === 'postal-code' ||
     /postal|zip|postcode|kod.?pocztowy/i.test(attr(f)),

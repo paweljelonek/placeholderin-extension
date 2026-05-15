@@ -3,6 +3,8 @@ import { firstNameGenerator } from '../providers/firstName';
 
 export const firstName: Rule = {
   type: 'firstName',
+  label: 'Imię',
+  icon: '👤',
   test: f =>
     f.getAttribute('autocomplete') === 'given-name' ||
     /first.?name|frst.?name|fname|imie|imię/i.test(attr(f)),

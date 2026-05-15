@@ -11,6 +11,8 @@ export function loadSettings(): Promise<Settings> {
   const defaults: Settings = {
     locale: detectLocale(),
     fillOnlyEmpty: true,
+    shortcut: { key: 'f', altKey: true, ctrlKey: false, shiftKey: true },
+    quickFillItems: ['firstName', 'lastName', 'city', 'street', 'postalCode', 'pesel'],
   };
   return new Promise(resolve =>
     chrome.storage.sync.get(defaults, r => resolve(r as Settings))

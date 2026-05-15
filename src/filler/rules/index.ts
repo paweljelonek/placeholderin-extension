@@ -11,6 +11,8 @@ export const attr = (f: HTMLInputElement) =>
 
 export interface Rule {
   type: string;
+  label: string;
+  icon: string;
   test: (field: HTMLInputElement) => boolean;
   generate: (locale: Locale) => string;
 }
