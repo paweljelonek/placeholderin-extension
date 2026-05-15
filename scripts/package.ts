@@ -4,7 +4,7 @@ import { join } from 'path';
 const target = process.argv[2];
 
 if (target !== 'chrome' && target !== 'firefox') {
-  console.error('Usage: node scripts/package.mjs <chrome|firefox>');
+  console.error('Usage: tsx scripts/package.ts <chrome|firefox>');
   process.exit(1);
 }
 
