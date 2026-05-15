@@ -7,7 +7,7 @@ A Chrome extension that fills web forms with realistic fake data - built for man
 
 ## What is this?
 
-Placeholderin is a lightweight browser extension that detects input fields on any web page and populates them with contextually appropriate fake data: names, emails, phone numbers, addresses, and more.
+Placeholderin is a lightweight browser extension that detects input fields on any web page and populates them with contextually appropriate fake data: names, addresses, phone numbers, tax identifiers, and more.
 
 It is aimed primarily at **manual testers** who need to quickly fill out forms during exploratory testing, regression testing, or demo walkthroughs - without copy-pasting from a notes file or making things up on the spot.
 
@@ -15,6 +15,66 @@ It is aimed primarily at **manual testers** who need to quickly fill out forms d
 
 > [!WARNING]
 > **Unstable - work in progress.** This project is in early development. Things are incomplete, APIs may change, and some features are still missing. There is no set release date - this project is developed in free time, for fun, with no deadlines and no pressure.
+
+## Features
+
+### Fill the whole form at once
+
+Click the extension icon and hit **Wypełnij formularz** to auto-detect and fill every matching field on the page in one shot.
+
+### Fill individual fields from the popup
+
+The popup exposes each field type as a separate button, so you can fill just one category at a time.
+
+### Keyboard shortcut overlay
+
+Hover over any input and press the configured shortcut (default **Alt+Shift+F**) to get a small floating menu right next to the field. Pick a data type from the list and it gets inserted immediately. No popup, no clicking around - just hover, press, pick.
+
+### Supported field types
+
+| Field | Detected by |
+|---|---|
+| 👤 First name | `autocomplete="given-name"`, name/id/placeholder containing `first_name`, `fname`, `imię`, … |
+| 👤 Last name | `autocomplete="family-name"`, `last_name`, `surname`, `nazwisko`, … |
+| 🏙 City | `autocomplete="address-level2"`, `city`, `town`, `miasto` |
+| 🏠 Street | `autocomplete="street-address"` / `address-line1"`, `street`, `address`, `ulica`, … |
+| 📮 Postal code | `autocomplete="postal-code"`, `zip`, `postcode`, `kod pocztowy` |
+| 🆔 PESEL | `pesel` anywhere in name/id/placeholder |
+| 🏢 NIP | `nip` (word boundary), `tax_id` |
+| 📞 Phone | `autocomplete="tel"`, name/id/placeholder containing `phone`, `mobile`, `gsm`, `tel` |
+
+Fields are auto-detected by matching `autocomplete` attributes, `name`, `id`, and `placeholder` against known patterns - no manual configuration needed.
+
+## Settings
+
+Open the settings page from the extension popup (⚙ Ustawienia).
+
+| Setting | Description |
+|---|---|
+| **Język** | Language of generated data (Polski / English) |
+| **Tylko puste pola** | When enabled, already-filled fields are not overwritten |
+| **Skrót klawiszowy** | Keyboard shortcut that opens the quick-fill overlay; click *Zmień* and press any key combination to record a new one |
+| **Widoczne opcje w menu** | Toggle which field types appear in the shortcut overlay |
+
+## Development
+
+```bash
+# install dependencies
+npm install
+
+# build once
+npm run build
+
+# watch mode
+npm run dev
+
+# run tests
+npm test
+```
+
+Built with TypeScript + esbuild. No framework dependencies - plain DOM, plain Chrome extension APIs.
+
+To load the extension locally: open `chrome://extensions`, enable *Developer mode*, click *Load unpacked*, and select this directory.
 
 ## Design goals
 
