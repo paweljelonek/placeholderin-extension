@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Placeholderin",
-  "description": "Fill forms with fake data for testing purposes",
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDescription__",
+  "default_locale": "en",
   "version": "0.1.0",
   "author": "Paweł Jelonek <pawel.jelonek@gmail.com>",
   "permissions": [

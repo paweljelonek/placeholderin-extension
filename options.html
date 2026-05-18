@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Placeholderin - Ustawienia</title>
+    <title>Placeholderin – Settings</title>
     <style>
       * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -262,26 +262,42 @@
     </style>
   </head>
   <body>
-    <p class="page-title">Ustawienia</p>
+    <p class="page-title" data-i18n="settingsTitle">Settings</p>
 
     <div class="section">
-      <div class="section-title">Ogólne</div>
+      <div class="section-title" data-i18n="settingsGeneral">General</div>
       <div class="card">
+
         <div class="setting-row">
           <div class="setting-label">
-            <strong>Język</strong>
-            <span>Język generowanych danych</span>
+            <strong data-i18n="settingsUiLanguage">Interface language</strong>
+            <span data-i18n="settingsUiLanguageDesc">Language of the extension interface</span>
           </div>
-          <select id="locale">
-            <option value="pl">🇵🇱 Polski</option>
+          <select id="uiLanguage">
             <option value="en">🇬🇧 English</option>
+            <option value="pl">🇵🇱 Polski</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="ru">🇷🇺 Русский</option>
           </select>
         </div>
 
         <div class="setting-row">
           <div class="setting-label">
-            <strong>Tylko puste pola</strong>
-            <span>Nie nadpisuj wypełnionych wartości</span>
+            <strong data-i18n="settingsLocale">Data language</strong>
+            <span data-i18n="settingsLocaleDesc">Language of generated data</span>
+          </div>
+          <select id="locale">
+            <option value="en">🇬🇧 English</option>
+            <option value="pl">🇵🇱 Polski</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="ru">🇷🇺 Русский</option>
+          </select>
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-label">
+            <strong data-i18n="settingsFillOnlyEmpty">Only empty fields</strong>
+            <span data-i18n="settingsFillOnlyEmptyDesc">Do not overwrite already filled values</span>
           </div>
           <label class="toggle">
             <input type="checkbox" id="fillOnlyEmpty" />
@@ -292,17 +308,17 @@
     </div>
 
     <div class="section">
-      <div class="section-title">Szybkie wypełnianie</div>
+      <div class="section-title" data-i18n="settingsShortcutSection">Quick fill</div>
       <div class="card">
 
         <div class="setting-row">
           <div class="setting-label">
-            <strong>Skrót klawiszowy</strong>
-            <span>Najedź na pole i naciśnij skrót, aby wybrać dane</span>
+            <strong data-i18n="settingsShortcut">Keyboard shortcut</strong>
+            <span data-i18n="settingsShortcutDesc">Hover over a field and press the shortcut to pick data</span>
           </div>
           <div class="shortcut-control">
             <span class="shortcut-badge" id="shortcutDisplay"></span>
-            <button class="btn-record" id="shortcutRecord">Zmień</button>
+            <button class="btn-record" id="shortcutRecord">Change</button>
           </div>
         </div>
 
@@ -310,8 +326,8 @@
 
         <div class="setting-row">
           <div class="setting-label">
-            <strong>Widoczne opcje w menu</strong>
-            <span>Które kategorie danych pokazać w menu skrótu</span>
+            <strong data-i18n="settingsQuickFillItems">Visible options in menu</strong>
+            <span data-i18n="settingsQuickFillItemsDesc">Which data categories to show in the shortcut menu</span>
           </div>
         </div>
 
@@ -321,25 +337,25 @@
     </div>
 
     <div class="footer">
-      <button class="btn-save" id="saveBtn">Zapisz</button>
+      <button class="btn-save" id="saveBtn" data-i18n="settingsSave">Save</button>
       <div id="status"></div>
     </div>
 
     <div class="section about">
-      <div class="section-title">O rozszerzeniu</div>
+      <div class="section-title" data-i18n="settingsAbout">About</div>
       <div class="card">
         <div class="about-row">
-          <span class="about-label">Autor</span>
+          <span class="about-label" data-i18n="settingsAboutAuthor">Author</span>
           <span class="about-value">Paweł Jelonek</span>
         </div>
         <div class="about-row">
-          <span class="about-label">Repozytorium</span>
+          <span class="about-label" data-i18n="settingsAboutRepo">Repository</span>
           <a class="about-link" href="https://github.com/paweljelonek/placeholderin-extension" target="_blank">
             GitHub ↗
           </a>
         </div>
         <div class="about-row">
-          <span class="about-label">Licencja</span>
+          <span class="about-label" data-i18n="settingsAboutLicense">License</span>
           <span class="about-value">MIT</span>
         </div>
       </div>

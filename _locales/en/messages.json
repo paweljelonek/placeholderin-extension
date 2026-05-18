@@ -1,0 +1,45 @@
+{
+  "appName":                   { "message": "Placeholderin",                                          "description": "Extension name" },
+  "appDescription":            { "message": "Fill forms with fake data for testing purposes",          "description": "Extension description" },
+
+  "popupSectionFields":        { "message": "Individual fields" },
+  "fillForm":                  { "message": "Fill form" },
+  "openSettings":              { "message": "Settings" },
+
+  "ruleFirstName":             { "message": "First name" },
+  "ruleLastName":              { "message": "Last name" },
+  "ruleCity":                  { "message": "City" },
+  "ruleStreet":                { "message": "Street" },
+  "rulePostalCode":            { "message": "Postal code" },
+  "rulePesel":                 { "message": "PESEL" },
+  "ruleNip":                   { "message": "NIP" },
+  "rulePhone":                 { "message": "Phone" },
+
+  "settingsTitle":             { "message": "Settings" },
+  "settingsGeneral":           { "message": "General" },
+  "settingsUiLanguage":        { "message": "Interface language" },
+  "settingsUiLanguageDesc":    { "message": "Language of the extension interface" },
+  "settingsLocale":            { "message": "Data language" },
+  "settingsLocaleDesc":        { "message": "Language of generated data" },
+  "settingsFillOnlyEmpty":     { "message": "Only empty fields" },
+  "settingsFillOnlyEmptyDesc": { "message": "Do not overwrite already filled values" },
+
+  "settingsShortcutSection":   { "message": "Quick fill" },
+  "settingsShortcut":          { "message": "Keyboard shortcut" },
+  "settingsShortcutDesc":      { "message": "Hover over a field and press the shortcut to pick data" },
+  "settingsShortcutRecord":    { "message": "Change" },
+  "settingsShortcutRecording": { "message": "Press shortcut…" },
+
+  "settingsQuickFillItems":    { "message": "Visible options in menu" },
+  "settingsQuickFillItemsDesc":{ "message": "Which data categories to show in the shortcut menu" },
+
+  "settingsSave":              { "message": "Save" },
+  "settingsSaved":             { "message": "✓ Saved" },
+
+  "settingsAbout":             { "message": "About" },
+  "settingsAboutAuthor":       { "message": "Author" },
+  "settingsAboutRepo":         { "message": "Repository" },
+  "settingsAboutLicense":      { "message": "License" },
+
+  "statusNoFields":            { "message": "No fields found or page is not ready." }
+}

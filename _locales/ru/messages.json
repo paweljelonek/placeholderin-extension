@@ -1,0 +1,45 @@
+{
+  "appName":                   { "message": "Placeholderin",                                          "description": "Название расширения" },
+  "appDescription":            { "message": "Заполняйте формы фиктивными данными для тестирования",   "description": "Описание расширения" },
+
+  "popupSectionFields":        { "message": "Отдельные поля" },
+  "fillForm":                  { "message": "Заполнить форму" },
+  "openSettings":              { "message": "Настройки" },
+
+  "ruleFirstName":             { "message": "Имя" },
+  "ruleLastName":              { "message": "Фамилия" },
+  "ruleCity":                  { "message": "Город" },
+  "ruleStreet":                { "message": "Улица" },
+  "rulePostalCode":            { "message": "Почтовый индекс" },
+  "rulePesel":                 { "message": "PESEL" },
+  "ruleNip":                   { "message": "NIP" },
+  "rulePhone":                 { "message": "Телефон" },
+
+  "settingsTitle":             { "message": "Настройки" },
+  "settingsGeneral":           { "message": "Общие" },
+  "settingsUiLanguage":        { "message": "Язык интерфейса" },
+  "settingsUiLanguageDesc":    { "message": "Язык отображения расширения" },
+  "settingsLocale":            { "message": "Язык данных" },
+  "settingsLocaleDesc":        { "message": "Язык генерируемых данных" },
+  "settingsFillOnlyEmpty":     { "message": "Только пустые поля" },
+  "settingsFillOnlyEmptyDesc": { "message": "Не перезаписывать уже заполненные значения" },
+
+  "settingsShortcutSection":   { "message": "Быстрое заполнение" },
+  "settingsShortcut":          { "message": "Сочетание клавиш" },
+  "settingsShortcutDesc":      { "message": "Наведите на поле и нажмите сочетание клавиш для выбора данных" },
+  "settingsShortcutRecord":    { "message": "Изменить" },
+  "settingsShortcutRecording": { "message": "Нажмите сочетание…" },
+
+  "settingsQuickFillItems":    { "message": "Видимые опции в меню" },
+  "settingsQuickFillItemsDesc":{ "message": "Какие категории данных показывать в меню быстрого заполнения" },
+
+  "settingsSave":              { "message": "Сохранить" },
+  "settingsSaved":             { "message": "✓ Сохранено" },
+
+  "settingsAbout":             { "message": "О расширении" },
+  "settingsAboutAuthor":       { "message": "Автор" },
+  "settingsAboutRepo":         { "message": "Репозиторий" },
+  "settingsAboutLicense":      { "message": "Лицензия" },
+
+  "statusNoFields":            { "message": "Поля не найдены или страница не готова." }
+}

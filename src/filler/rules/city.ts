@@ -3,7 +3,6 @@ import { cityGenerator } from '../providers/city';
 
 export const city: Rule = {
   type: 'city',
-  label: 'Miasto',
   icon: '🏙',
   test: f =>
     f.getAttribute('autocomplete') !== 'address-line2' &&

@@ -1,0 +1,45 @@
+{
+  "appName":                   { "message": "Placeholderin",                                          "description": "Nazwa rozszerzenia" },
+  "appDescription":            { "message": "Wypełniaj formularze fałszywymi danymi do testów",       "description": "Opis rozszerzenia" },
+
+  "popupSectionFields":        { "message": "Pojedyncze pola" },
+  "fillForm":                  { "message": "Wypełnij formularz" },
+  "openSettings":              { "message": "Ustawienia" },
+
+  "ruleFirstName":             { "message": "Imię" },
+  "ruleLastName":              { "message": "Nazwisko" },
+  "ruleCity":                  { "message": "Miasto" },
+  "ruleStreet":                { "message": "Ulica" },
+  "rulePostalCode":            { "message": "Kod pocztowy" },
+  "rulePesel":                 { "message": "PESEL" },
+  "ruleNip":                   { "message": "NIP" },
+  "rulePhone":                 { "message": "Telefon" },
+
+  "settingsTitle":             { "message": "Ustawienia" },
+  "settingsGeneral":           { "message": "Ogólne" },
+  "settingsUiLanguage":        { "message": "Język interfejsu" },
+  "settingsUiLanguageDesc":    { "message": "Język wyświetlania rozszerzenia" },
+  "settingsLocale":            { "message": "Język danych" },
+  "settingsLocaleDesc":        { "message": "Język generowanych danych" },
+  "settingsFillOnlyEmpty":     { "message": "Tylko puste pola" },
+  "settingsFillOnlyEmptyDesc": { "message": "Nie nadpisuj wypełnionych wartości" },
+
+  "settingsShortcutSection":   { "message": "Szybkie wypełnianie" },
+  "settingsShortcut":          { "message": "Skrót klawiszowy" },
+  "settingsShortcutDesc":      { "message": "Najedź na pole i naciśnij skrót, aby wybrać dane" },
+  "settingsShortcutRecord":    { "message": "Zmień" },
+  "settingsShortcutRecording": { "message": "Naciśnij skrót…" },
+
+  "settingsQuickFillItems":    { "message": "Widoczne opcje w menu" },
+  "settingsQuickFillItemsDesc":{ "message": "Które kategorie danych pokazać w menu skrótu" },
+
+  "settingsSave":              { "message": "Zapisz" },
+  "settingsSaved":             { "message": "✓ Zapisano" },
+
+  "settingsAbout":             { "message": "O rozszerzeniu" },
+  "settingsAboutAuthor":       { "message": "Autor" },
+  "settingsAboutRepo":         { "message": "Repozytorium" },
+  "settingsAboutLicense":      { "message": "Licencja" },
+
+  "statusNoFields":            { "message": "Brak pól lub strona nie jest gotowa." }
+}

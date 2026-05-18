@@ -1,0 +1,45 @@
+{
+  "appName":                   { "message": "Placeholderin",                                                              "description": "Name der Erweiterung" },
+  "appDescription":            { "message": "Formulare mit gefälschten Daten für Testzwecke ausfüllen",                   "description": "Beschreibung der Erweiterung" },
+
+  "popupSectionFields":        { "message": "Einzelne Felder" },
+  "fillForm":                  { "message": "Formular ausfüllen" },
+  "openSettings":              { "message": "Einstellungen" },
+
+  "ruleFirstName":             { "message": "Vorname" },
+  "ruleLastName":              { "message": "Nachname" },
+  "ruleCity":                  { "message": "Stadt" },
+  "ruleStreet":                { "message": "Straße" },
+  "rulePostalCode":            { "message": "Postleitzahl" },
+  "rulePesel":                 { "message": "PESEL" },
+  "ruleNip":                   { "message": "NIP" },
+  "rulePhone":                 { "message": "Telefon" },
+
+  "settingsTitle":             { "message": "Einstellungen" },
+  "settingsGeneral":           { "message": "Allgemein" },
+  "settingsUiLanguage":        { "message": "Oberflächensprache" },
+  "settingsUiLanguageDesc":    { "message": "Sprache der Erweiterungsoberfläche" },
+  "settingsLocale":            { "message": "Datensprache" },
+  "settingsLocaleDesc":        { "message": "Sprache der generierten Daten" },
+  "settingsFillOnlyEmpty":     { "message": "Nur leere Felder" },
+  "settingsFillOnlyEmptyDesc": { "message": "Bereits ausgefüllte Felder nicht überschreiben" },
+
+  "settingsShortcutSection":   { "message": "Schnellausfüllung" },
+  "settingsShortcut":          { "message": "Tastenkürzel" },
+  "settingsShortcutDesc":      { "message": "Mauszeiger auf ein Feld bewegen und Kürzel drücken, um Daten auszuwählen" },
+  "settingsShortcutRecord":    { "message": "Ändern" },
+  "settingsShortcutRecording": { "message": "Tastenkürzel drücken…" },
+
+  "settingsQuickFillItems":    { "message": "Sichtbare Optionen im Menü" },
+  "settingsQuickFillItemsDesc":{ "message": "Welche Datenkategorien im Schnellmenü angezeigt werden" },
+
+  "settingsSave":              { "message": "Speichern" },
+  "settingsSaved":             { "message": "✓ Gespeichert" },
+
+  "settingsAbout":             { "message": "Über" },
+  "settingsAboutAuthor":       { "message": "Autor" },
+  "settingsAboutRepo":         { "message": "Repository" },
+  "settingsAboutLicense":      { "message": "Lizenz" },
+
+  "statusNoFields":            { "message": "Keine Felder gefunden oder Seite ist nicht bereit." }
+}

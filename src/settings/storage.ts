@@ -1,6 +1,6 @@
 import { Locale, Settings } from './types';
 
-function detectLocale(): Locale {
+function detectDataLocale(): Locale {
   const lang = chrome.i18n.getUILanguage().split('-')[0].toLowerCase();
   return (Object.values(Locale) as string[]).includes(lang)
     ? (lang as Locale)
@@ -9,9 +9,10 @@ function detectLocale(): Locale {
 
 export function loadSettings(): Promise<Settings> {
   const defaults: Settings = {
-    locale: detectLocale(),
+    locale:        detectDataLocale(),
+    uiLanguage:    Locale.EN,
     fillOnlyEmpty: true,
-    shortcut: { key: 'f', altKey: true, ctrlKey: false, shiftKey: true },
+    shortcut:      { key: 'f', altKey: true, ctrlKey: false, shiftKey: true },
     quickFillItems: ['firstName', 'lastName', 'city', 'street', 'postalCode', 'pesel'],
   };
   return new Promise(resolve =>

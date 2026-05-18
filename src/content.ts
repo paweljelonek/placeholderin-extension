@@ -2,6 +2,7 @@ import { fillAll } from './filler';
 import { rules } from './filler/rules';
 import { loadSettings, Settings, matchesShortcut } from './settings';
 import { showOverlay, getOpenOverlay } from './content/overlay';
+import { t, ruleKey } from './i18n';
 
 let hoveredInput: HTMLInputElement | null = null;
 let closeOverlay: (() => void) | null = null;
@@ -12,9 +13,9 @@ function dismissOverlay(): void {
 }
 
 document.addEventListener('mouseover', e => {
-  const t = e.target;
-  if (t instanceof HTMLInputElement || t instanceof HTMLTextAreaElement) {
-    hoveredInput = t as HTMLInputElement;
+  const target = e.target;
+  if (target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement) {
+    hoveredInput = target as HTMLInputElement;
   }
 });
 
@@ -37,9 +38,10 @@ document.addEventListener('keydown', async e => {
   dismissOverlay();
 
   const input = hoveredInput;
+  const lang  = settings.uiLanguage;
   const items = rules
     .filter(r => settings.quickFillItems.includes(r.type))
-    .map(r => ({ type: r.type, label: r.label, icon: r.icon }));
+    .map(r => ({ type: r.type, label: t(ruleKey(r.type), lang), icon: r.icon }));
 
   closeOverlay = showOverlay(input, items, type => {
     const rule = rules.find(r => r.type === type);

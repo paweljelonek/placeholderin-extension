@@ -1,13 +1,20 @@
-import { actions } from './actions';
+import { createActions } from './actions';
+import { loadSettings } from '../settings';
+import { t, applyI18n } from '../i18n';
 
 async function init(): Promise<void> {
-  const [tab]     = await chrome.tabs.query({ active: true, currentWindow: true });
+  const [tab]    = await chrome.tabs.query({ active: true, currentWindow: true });
+  const settings = await loadSettings();
+  const lang     = settings.uiLanguage;
+
+  applyI18n(lang);
+
   const primaryEl = document.getElementById('action-primary') as HTMLDivElement;
   const gridEl    = document.getElementById('action-grid')    as HTMLDivElement;
   const footerEl  = document.getElementById('action-footer')  as HTMLDivElement;
   const statusEl  = document.getElementById('status')         as HTMLDivElement;
 
-  const buttons: HTMLButtonElement[] = actions.map(action => {
+  const buttons: HTMLButtonElement[] = createActions(lang).map(action => {
     const btn = document.createElement('button');
 
     if (action.primary) {
@@ -32,7 +39,7 @@ async function init(): Promise<void> {
         const msg = await action.handler(tab ?? null);
         if (msg) statusEl.textContent = msg;
       } catch {
-        statusEl.textContent = 'Brak pól lub strona nie jest gotowa.';
+        statusEl.textContent = t('statusNoFields', lang);
       } finally {
         buttons.forEach(b => (b.disabled = false));
       }

@@ -20,7 +20,7 @@ It is aimed primarily at **manual testers** who need to quickly fill out forms d
 
 ### Fill the whole form at once
 
-Click the extension icon and hit **Wypełnij formularz** to auto-detect and fill every matching field on the page in one shot.
+Click the extension icon and hit **Fill form** to auto-detect and fill every matching field on the page in one shot.
 
 ### Fill individual fields from the popup
 
@@ -37,24 +37,51 @@ Hover over any input and press the configured shortcut (default **Alt+Shift+F**)
 | 👤 First name | `autocomplete="given-name"`, name/id/placeholder containing `first_name`, `fname`, `imię`, … |
 | 👤 Last name | `autocomplete="family-name"`, `last_name`, `surname`, `nazwisko`, … |
 | 🏙 City | `autocomplete="address-level2"`, `city`, `town`, `miasto` |
-| 🏠 Street | `autocomplete="street-address"` / `address-line1"`, `street`, `address`, `ulica`, … |
+| 🏠 Street | `autocomplete="street-address"` / `address-line1`, `street`, `address`, `ulica`, … |
 | 📮 Postal code | `autocomplete="postal-code"`, `zip`, `postcode`, `kod pocztowy` |
+| 📞 Phone | `autocomplete="tel"`, name/id/placeholder containing `phone`, `mobile`, `gsm`, `tel` |
 | 🆔 PESEL | `pesel` anywhere in name/id/placeholder |
 | 🏢 NIP | `nip` (word boundary), `tax_id` |
-| 📞 Phone | `autocomplete="tel"`, name/id/placeholder containing `phone`, `mobile`, `gsm`, `tel` |
 
 Fields are auto-detected by matching `autocomplete` attributes, `name`, `id`, and `placeholder` against known patterns - no manual configuration needed.
 
 ## Settings
 
-Open the settings page from the extension popup (⚙ Ustawienia).
+Open the settings page from the extension popup (⚙ Settings).
 
 | Setting | Description |
 |---|---|
-| **Język** | Language of generated data (Polski / English) |
-| **Tylko puste pola** | When enabled, already-filled fields are not overwritten |
-| **Skrót klawiszowy** | Keyboard shortcut that opens the quick-fill overlay; click *Zmień* and press any key combination to record a new one |
-| **Widoczne opcje w menu** | Toggle which field types appear in the shortcut overlay |
+| **Interface language** | Language of the extension UI. Changing this reloads the settings page immediately. |
+| **Data language** | Language of generated data - affects names, cities, streets, phone numbers, and other locale-specific values. |
+| **Only empty fields** | When enabled, already-filled fields are not overwritten. |
+| **Keyboard shortcut** | Shortcut that opens the quick-fill overlay; click *Change* and press any key combination to record a new one. |
+| **Visible options in menu** | Toggle which field types appear in the shortcut overlay. |
+
+### Interface language vs. data language
+
+These are two independent settings:
+
+- **Interface language** controls the labels, buttons, and all text in the extension itself. Defaults to English when no preference has been saved.
+- **Data language** controls what kind of data gets generated. Supported locales and what they affect:
+
+| Locale | Names | Cities | Streets | Phone format | Postal code |
+|---|---|---|---|---|---|
+| 🇬🇧 English | American | US cities | US-style (`123 Main St`) | `(415) 555-1234` | 5 digits |
+| 🇵🇱 Polski | Polish | Polish cities | Polish (`ul. Kwiatowa 12`) | 9-digit mobile | `XX-XXX` |
+| 🇩🇪 Deutsch | German | German cities | German (`Hauptstraße 1`) | `0176 xxxxxxxx` | 5 digits |
+| 🇷🇺 Русский | Russian | Russian cities | Russian (`ул. Ленина 5`) | `+7 9xx xxx-xx-xx` | 6 digits |
+
+PESEL and NIP are Polish-specific identifiers and always generate Polish values regardless of the data language setting.
+
+## Internationalisation
+
+The extension is fully localised using the Chrome/Firefox `_locales` convention. Translation files live in `_locales/<lang>/messages.json`. Currently supported languages: **English** (`en`), **Polish** (`pl`), **German** (`de`), and **Russian** (`ru`).
+
+Adding a new language requires:
+1. Creating `_locales/<lang>/messages.json` with the same keys as `_locales/en/messages.json`.
+2. Adding the corresponding `<option>` to both language selects in `options.html`.
+3. Adding the locale value to the `Locale` constant in `src/settings/types.ts`.
+4. Adding locale-specific data to each provider in `src/filler/providers/` (names, cities, streets, phone format, postal code format).
 
 ## Development
 

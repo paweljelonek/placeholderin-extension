@@ -9,7 +9,9 @@ class PostalCodeGenerator implements DataGenerator {
   generate(locale: Locale): string {
     switch (locale) {
       case 'pl': return `${digits(2)}-${digits(3)}`;
-      case 'en': return digits(5);
+      case 'de': return digits(5);
+      case 'ru': return digits(6);
+      default:   return digits(5);
     }
   }
 }
