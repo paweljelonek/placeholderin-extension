@@ -9,4 +9,8 @@ describe('PostalCodeGenerator', () => {
   it('generates English format XXXXX', () => {
     expect(postalCodeGenerator.generate('en')).toMatch(/^\d{5}$/);
   });
+
+  it('generates French format XXXXX', () => {
+    expect(postalCodeGenerator.generate('fr')).toMatch(/^\d{5}$/);
+  });
 });

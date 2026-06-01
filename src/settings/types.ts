@@ -3,6 +3,7 @@ export const Locale = {
   PL: 'pl',
   DE: 'de',
   RU: 'ru',
+  FR: 'fr',
 } as const;
 
 export type Locale = typeof Locale[keyof typeof Locale];

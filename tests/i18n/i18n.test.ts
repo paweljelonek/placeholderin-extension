@@ -33,7 +33,20 @@ describe('t()', () => {
   });
 
   it('falls back to English when language is not in catalogue', () => {
-    expect(t('fillForm', 'fr' as 'en')).toBe('Fill form');
+    expect(t('fillForm', 'xx' as 'en')).toBe('Fill form');
+  });
+
+  it('returns French message for known key in "fr"', () => {
+    expect(t('fillForm', 'fr')).toBe('Remplir le formulaire');
+  });
+
+  it('returns French message for all rule keys in "fr"', () => {
+    expect(t('ruleFirstName',  'fr')).toBe('Prénom');
+    expect(t('ruleLastName',   'fr')).toBe('Nom de famille');
+    expect(t('ruleCity',       'fr')).toBe('Ville');
+    expect(t('ruleStreet',     'fr')).toBe('Rue');
+    expect(t('rulePostalCode', 'fr')).toBe('Code postal');
+    expect(t('rulePhone',      'fr')).toBe('Téléphone');
   });
 });
 

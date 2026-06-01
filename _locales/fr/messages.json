@@ -1,0 +1,45 @@
+{
+  "appName":                   { "message": "Placeholderin",                                                              "description": "Nom de l'extension" },
+  "appDescription":            { "message": "Remplir les formulaires avec de fausses données à des fins de test",         "description": "Description de l'extension" },
+
+  "popupSectionFields":        { "message": "Champs individuels" },
+  "fillForm":                  { "message": "Remplir le formulaire" },
+  "openSettings":              { "message": "Paramètres" },
+
+  "ruleFirstName":             { "message": "Prénom" },
+  "ruleLastName":              { "message": "Nom de famille" },
+  "ruleCity":                  { "message": "Ville" },
+  "ruleStreet":                { "message": "Rue" },
+  "rulePostalCode":            { "message": "Code postal" },
+  "rulePesel":                 { "message": "PESEL" },
+  "ruleNip":                   { "message": "NIP" },
+  "rulePhone":                 { "message": "Téléphone" },
+
+  "settingsTitle":             { "message": "Paramètres" },
+  "settingsGeneral":           { "message": "Général" },
+  "settingsUiLanguage":        { "message": "Langue de l'interface" },
+  "settingsUiLanguageDesc":    { "message": "Langue de l'interface de l'extension" },
+  "settingsLocale":            { "message": "Langue des données" },
+  "settingsLocaleDesc":        { "message": "Langue des données générées" },
+  "settingsFillOnlyEmpty":     { "message": "Champs vides uniquement" },
+  "settingsFillOnlyEmptyDesc": { "message": "Ne pas écraser les valeurs déjà remplies" },
+
+  "settingsShortcutSection":   { "message": "Remplissage rapide" },
+  "settingsShortcut":          { "message": "Raccourci clavier" },
+  "settingsShortcutDesc":      { "message": "Survolez un champ et appuyez sur le raccourci pour sélectionner des données" },
+  "settingsShortcutRecord":    { "message": "Modifier" },
+  "settingsShortcutRecording": { "message": "Appuyez sur le raccourci…" },
+
+  "settingsQuickFillItems":    { "message": "Options visibles dans le menu" },
+  "settingsQuickFillItemsDesc":{ "message": "Quelles catégories de données afficher dans le menu rapide" },
+
+  "settingsSave":              { "message": "Enregistrer" },
+  "settingsSaved":             { "message": "✓ Enregistré" },
+
+  "settingsAbout":             { "message": "À propos" },
+  "settingsAboutAuthor":       { "message": "Auteur" },
+  "settingsAboutRepo":         { "message": "Dépôt" },
+  "settingsAboutLicense":      { "message": "Licence" },
+
+  "statusNoFields":            { "message": "Aucun champ trouvé ou la page n'est pas prête." }
+}

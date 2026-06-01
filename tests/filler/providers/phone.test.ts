@@ -25,4 +25,10 @@ describe('generatePhone', () => {
   it('generates a valid number for country pl', () => {
     expect(generatePhone('pl')).toMatch(/^\d{9}$/);
   });
+
+  it('generates a valid French mobile number', () => {
+    for (let i = 0; i < 20; i++) {
+      expect(generatePhone('fr')).toMatch(/^0[67]( \d{2}){4}$/);
+    }
+  });
 });
