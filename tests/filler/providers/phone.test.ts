@@ -31,4 +31,10 @@ describe('generatePhone', () => {
       expect(generatePhone('fr')).toMatch(/^0[67]( \d{2}){4}$/);
     }
   });
+
+  it('generates a valid Spanish mobile number', () => {
+    for (let i = 0; i < 20; i++) {
+      expect(generatePhone('es')).toMatch(/^\+34 [67]\d{2} \d{3} \d{3}$/);
+    }
+  });
 });

@@ -12,6 +12,7 @@ class PostalCodeGenerator implements DataGenerator {
       case 'de': return digits(5);
       case 'ru': return digits(6);
       case 'fr': return digits(5);
+      case 'es': return digits(5);
       default:   return digits(5);
     }
   }

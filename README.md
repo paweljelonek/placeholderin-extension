@@ -71,12 +71,13 @@ These are two independent settings:
 | 🇩🇪 Deutsch | German | German cities | German (`Hauptstraße 1`) | `0176 xxxxxxxx` | 5 digits |
 | 🇷🇺 Русский | Russian | Russian cities | Russian (`ул. Ленина 5`) | `+7 9xx xxx-xx-xx` | 6 digits |
 | 🇫🇷 Français | French | French cities | French (`5 rue de la Paix`) | `06 xx xx xx xx` | 5 digits |
+| 🇪🇸 Español | Spanish | Spanish cities | Spanish (`Calle Mayor 1`) | `+34 6xx xxx xxx` | 5 digits |
 
 PESEL and NIP are Polish-specific identifiers and always generate Polish values regardless of the data language setting.
 
 ## Internationalisation
 
-The extension is fully localised using the Chrome/Firefox `_locales` convention. Translation files live in `_locales/<lang>/messages.json`. Currently supported languages: **English** (`en`), **Polish** (`pl`), **German** (`de`), **Russian** (`ru`), and **French** (`fr`).
+The extension is fully localised using the Chrome/Firefox `_locales` convention. Translation files live in `_locales/<lang>/messages.json`. Currently supported languages: **English** (`en`), **Polish** (`pl`), **German** (`de`), **Russian** (`ru`), **French** (`fr`), and **Spanish** (`es`).
 
 Adding a new language requires:
 1. Creating `_locales/<lang>/messages.json` with the same keys as `_locales/en/messages.json`.

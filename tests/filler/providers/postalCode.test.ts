@@ -13,4 +13,8 @@ describe('PostalCodeGenerator', () => {
   it('generates French format XXXXX', () => {
     expect(postalCodeGenerator.generate('fr')).toMatch(/^\d{5}$/);
   });
+
+  it('generates Spanish format XXXXX', () => {
+    expect(postalCodeGenerator.generate('es')).toMatch(/^\d{5}$/);
+  });
 });

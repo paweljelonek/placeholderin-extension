@@ -48,6 +48,19 @@ describe('t()', () => {
     expect(t('rulePostalCode', 'fr')).toBe('Code postal');
     expect(t('rulePhone',      'fr')).toBe('Téléphone');
   });
+
+  it('returns Spanish message for known key in "es"', () => {
+    expect(t('fillForm', 'es')).toBe('Rellenar formulario');
+  });
+
+  it('returns Spanish message for all rule keys in "es"', () => {
+    expect(t('ruleFirstName',  'es')).toBe('Nombre');
+    expect(t('ruleLastName',   'es')).toBe('Apellido');
+    expect(t('ruleCity',       'es')).toBe('Ciudad');
+    expect(t('ruleStreet',     'es')).toBe('Calle');
+    expect(t('rulePostalCode', 'es')).toBe('Código postal');
+    expect(t('rulePhone',      'es')).toBe('Teléfono');
+  });
 });
 
 describe('ruleKey()', () => {

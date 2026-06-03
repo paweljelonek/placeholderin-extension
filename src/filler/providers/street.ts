@@ -26,4 +26,9 @@ export const streetGenerator = new StaticDataGenerator({
     '4 rue du Commerce', '11 boulevard du Temple', '6 rue des Fleurs', '18 avenue de la Liberté', '2 rue du Château', '25 boulevard de la Mer', '13 rue du Moulin', '30 avenue du Général de Gaulle', '15 rue des Roses', '8 place de la Mairie',
     '22 rue des Lilas', '5 avenue du Maréchal Foch', '10 rue Voltaire', '16 boulevard de la Gare', '3 rue du Moulin à Vent', '19 avenue Jean Jaurès', '7 rue des Peupliers', '24 boulevard Voltaire', '11 rue de la Fontaine', '28 avenue du Président Wilson',
   ],
+  es: [
+    'Calle Mayor 1', 'Calle del Sol 5', 'Avenida de la Constitución 12', 'Calle Real 3', 'Paseo de la Castellana 7', 'Calle de la Paz 8', 'Gran Vía 21', 'Calle del Carmen 14', 'Avenida de España 9', 'Calle Nueva 17',
+    'Calle del Príncipe 4', 'Calle de Alcalá 11', 'Calle San Francisco 6', 'Avenida del Mediterráneo 18', 'Calle Cervantes 2', 'Paseo de Gracia 25', 'Calle de la Rosa 13', 'Calle San Pedro 30', 'Avenida de la Libertad 15', 'Calle Colón 8',
+    'Calle de los Olivos 22', 'Avenida del Rey 5', 'Calle del Lago 19', 'Calle de la Montaña 7', 'Avenida del Puerto 11', 'Calle de la Mar 16', 'Paseo del Parque 3', 'Calle del Pino 24', 'Avenida de Andalucía 10', 'Calle de los Pinos 28',
+  ],
 });

@@ -3,11 +3,12 @@ import pl from '../../_locales/pl/messages.json';
 import de from '../../_locales/de/messages.json';
 import ru from '../../_locales/ru/messages.json';
 import fr from '../../_locales/fr/messages.json';
+import es from '../../_locales/es/messages.json';
 import { Locale } from '../settings/types';
 
 export type MessageKey = keyof typeof en;
 
-const catalogues = { en, pl, de, ru, fr } as Record<Locale, typeof en>;
+const catalogues = { en, pl, de, ru, fr, es } as Record<Locale, typeof en>;
 
 export function t(key: MessageKey, lang: Locale): string {
   return (catalogues[lang]?.[key] ?? en[key]).message;

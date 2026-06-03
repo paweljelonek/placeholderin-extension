@@ -26,4 +26,9 @@ export const cityGenerator = new StaticDataGenerator({
     'Rennes', 'Reims', 'Saint-Étienne', 'Toulon', 'Le Havre', 'Grenoble', 'Dijon', 'Angers', 'Nîmes', 'Villeurbanne',
     'Saint-Denis', 'Le Mans', 'Aix-en-Provence', 'Clermont-Ferrand', 'Brest', 'Tours', 'Limoges', 'Amiens', 'Perpignan', 'Metz',
   ],
+  es: [
+    'Madrid', 'Barcelona', 'Valencia', 'Sevilla', 'Zaragoza', 'Málaga', 'Murcia', 'Palma', 'Las Palmas', 'Bilbao',
+    'Alicante', 'Córdoba', 'Valladolid', 'Vigo', 'Gijón', 'Granada', 'Hospitalet', 'La Coruña', 'Vitoria-Gasteiz', 'Santa Cruz de Tenerife',
+    'Pamplona', 'Almería', 'San Sebastián', 'Santander', 'Burgos', 'Castellón', 'Badajoz', 'Albacete', 'Getafe', 'Oviedo',
+  ],
 });

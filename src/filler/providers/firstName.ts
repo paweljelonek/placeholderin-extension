@@ -26,4 +26,9 @@ export const firstNameGenerator = new StaticDataGenerator({
     'Arthur', 'Inès', 'Jules', 'Camille', 'Hugo', 'Manon', 'Théo', 'Léa', 'Tom', 'Sarah',
     'Maxime', 'Zoé', 'Antoine', 'Juliette', 'Baptiste', 'Clara', 'Nathan', 'Lucie', 'Pierre', 'Mathilde',
   ],
+  es: [
+    'Carlos', 'María', 'José', 'Ana', 'Manuel', 'Carmen', 'Antonio', 'Laura', 'Francisco', 'Sofía',
+    'Javier', 'Isabel', 'David', 'Elena', 'Miguel', 'Paula', 'Daniel', 'Marta', 'Pablo', 'Lucía',
+    'Alejandro', 'Natalia', 'Sergio', 'Raquel', 'Rubén', 'Cristina', 'Roberto', 'Silvia', 'Juan', 'Beatriz',
+  ],
 });

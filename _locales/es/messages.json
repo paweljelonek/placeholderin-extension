@@ -1,0 +1,45 @@
+{
+  "appName":                   { "message": "Placeholderin",                                                           "description": "Nombre de la extensión" },
+  "appDescription":            { "message": "Rellena formularios con datos falsos para pruebas",                       "description": "Descripción de la extensión" },
+
+  "popupSectionFields":        { "message": "Campos individuales" },
+  "fillForm":                  { "message": "Rellenar formulario" },
+  "openSettings":              { "message": "Ajustes" },
+
+  "ruleFirstName":             { "message": "Nombre" },
+  "ruleLastName":              { "message": "Apellido" },
+  "ruleCity":                  { "message": "Ciudad" },
+  "ruleStreet":                { "message": "Calle" },
+  "rulePostalCode":            { "message": "Código postal" },
+  "rulePesel":                 { "message": "PESEL" },
+  "ruleNip":                   { "message": "NIP" },
+  "rulePhone":                 { "message": "Teléfono" },
+
+  "settingsTitle":             { "message": "Ajustes" },
+  "settingsGeneral":           { "message": "General" },
+  "settingsUiLanguage":        { "message": "Idioma de la interfaz" },
+  "settingsUiLanguageDesc":    { "message": "Idioma de la interfaz de la extensión" },
+  "settingsLocale":            { "message": "Idioma de los datos" },
+  "settingsLocaleDesc":        { "message": "Idioma de los datos generados" },
+  "settingsFillOnlyEmpty":     { "message": "Solo campos vacíos" },
+  "settingsFillOnlyEmptyDesc": { "message": "No sobreescribir valores ya rellenados" },
+
+  "settingsShortcutSection":   { "message": "Relleno rápido" },
+  "settingsShortcut":          { "message": "Atajo de teclado" },
+  "settingsShortcutDesc":      { "message": "Pasa el cursor sobre un campo y pulsa el atajo para elegir un dato" },
+  "settingsShortcutRecord":    { "message": "Cambiar" },
+  "settingsShortcutRecording": { "message": "Pulsa el atajo…" },
+
+  "settingsQuickFillItems":    { "message": "Opciones visibles en el menú" },
+  "settingsQuickFillItemsDesc":{ "message": "Qué categorías de datos mostrar en el menú rápido" },
+
+  "settingsSave":              { "message": "Guardar" },
+  "settingsSaved":             { "message": "✓ Guardado" },
+
+  "settingsAbout":             { "message": "Acerca de" },
+  "settingsAboutAuthor":       { "message": "Autor" },
+  "settingsAboutRepo":         { "message": "Repositorio" },
+  "settingsAboutLicense":      { "message": "Licencia" },
+
+  "statusNoFields":            { "message": "No se encontraron campos o la página no está lista." }
+}
